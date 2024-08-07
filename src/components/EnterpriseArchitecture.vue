@@ -1,21 +1,19 @@
 <template>
-    <div class="container mt-4">
+  <div class="container mt-4">
+    <div class="text-center mb-4">
+      <img src="@/assets/Logo.png" class="img-fluid mb-3" alt="Enterprise Architecture Designs" />
       <h2>Enterprise Architecture Designs</h2>
-      <p>
+      <p class="lead">
         Building resilient and adaptable IT Architectures that align with your business
         goals and set the foundation for growth. Our designs ensure that your business
         operations are streamlined and interconnected.
       </p>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'EnterpriseArchitecture',
-  };
-  </script>
-  
-  <style scoped>
-  /* Add custom styles here if necessary */
-  </style>
-  
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const name = 'EnterpriseArchitecture';
+</script>

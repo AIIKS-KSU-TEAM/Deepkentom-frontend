@@ -1,22 +1,21 @@
 <template>
     <div class="container mt-4">
-      <h2>ERP Solutions</h2>
-      <p>
-        We maximize efficiency and improve decision-making with our comprehensive ERP
-        solutions by streamlining business processes with integrated ERP solutions to
-        ensure optimal performance and enhanced decision-making. Designed to integrate
-        all aspects of your business processes into one unified system.
-      </p>
+      <div class="text-center mb-4">
+        <img src="@/assets/Logo.png" class="img-fluid mb-3" alt="ERP Solutions" />
+        <h2>ERP Solutions</h2>
+        <p class="lead">
+          We maximize efficiency and improve decision-making with our comprehensive ERP
+          solutions by streamlining business processes with integrated ERP solutions to
+          ensure optimal performance and enhanced decision-making. Designed to integrate
+          all aspects of your business processes into one unified system.
+        </p>
+      </div>
     </div>
   </template>
   
-  <script>
-  export default {
-    name: 'ERPSolutions',
-  };
-  </script>
+  <script setup>
+  import { ref } from 'vue';
   
-  <style scoped>
-  /* Add custom styles here if necessary */
-  </style>
+  const name = 'ERPSolutions';
+  </script>
   
