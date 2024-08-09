@@ -6,6 +6,10 @@ import SoftwareSolutions from '@/components/SoftwareSolutions.vue'
 import ConsultancyAndResearch from '@/components/ConsultancyAndResearch.vue'
 import EnterpriseArchitecture from '@/components/EnterpriseArchitecture.vue'
 import ERPSolutions from '@/components/ERPSolutions.vue'
+import PostListComponent from '../components/PostList.vue'; 
+import PostDetailComponent from '../components/PostDetail.vue'; 
+import CreatePost from '../components/CreatePost.vue';
+import About from '@/components/About.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +18,11 @@ const router = createRouter({
       path: '/',
       name: 'welcome',
       component: Welcome
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About
     },
     {
       path: '/contact',
@@ -44,6 +53,22 @@ const router = createRouter({
       path: '/erp-solutions',
       name: 'ERPSolutions',
       component: ERPSolutions,
+    },
+    { 
+      path: '/create-post', 
+      name: 'CreatePost', 
+      component: CreatePost 
+    },
+    {
+      path: '/blog',
+      name: 'PostList',
+      component: PostListComponent,
+    },
+    {
+      path: '/blog/post/:year/:month/:day/:slug',
+      name: 'PostDetail',
+      component: PostDetailComponent,
+      props: true,
     },
   ]
 })

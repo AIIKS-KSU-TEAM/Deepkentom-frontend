@@ -45,6 +45,7 @@ const submitForm = async (event) => {
         <!-- Contact Form -->
         <div class="col-md-6 mb-4 mb-md-0">
           <h2 class="h2 mb-4">Contact Us</h2>
+          <hr class="bg-warning w-25 mx-auto mx-md-0">
           <form @submit="submitForm">
             <div v-if="formMessage" :class="['alert', alertType]" role="alert">
               {{ formMessage }}
@@ -68,6 +69,7 @@ const submitForm = async (event) => {
         <!-- Map -->
         <div class="col-md-6">
           <h2 class="h2 mb-4">Our Location</h2>
+          <hr class="bg-warning w-25 mx-auto mx-md-0">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.8217088203!2d34.781737376012316!3d-0.6923034873102553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b3f6840164ff1%3A0x8040e0d2e546b570!2sKisii%20University%20Main%20Campus!5e0!3m2!1sen!2ske!4v1723017296428!5m2!1sen!2ske" 

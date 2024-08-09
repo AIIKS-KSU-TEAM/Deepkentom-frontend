@@ -17,11 +17,11 @@
           <h2 class="h5">Quick Links</h2>
           <hr class="bg-warning w-25">
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-            <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Services</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Portfolio</a></li>
-            <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+            <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="/about" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="/services" class="text-white text-decoration-none">Services</a></li>
+            <li><a href="/blog" class="text-white text-decoration-none">Blog</a></li>
+            <li><a href="/contact" class="text-white text-decoration-none">Contact Us</a></li>
           </ul>
         </div>
 

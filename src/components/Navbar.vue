@@ -16,13 +16,13 @@ import logo from '@/assets/Logo.png';
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/welcome">About</a>
+            <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Collaborate</a>
+            <a class="nav-link" href="/blog">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/contact">Contact</a>
