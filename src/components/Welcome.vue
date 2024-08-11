@@ -31,7 +31,7 @@ import Footer from './Footer.vue';
                 and a range of professional services tailored to empower business and agricultural stakeholders.</p>
             </div>
             <div class="col-md-6 d-flex justify-content-center">
-              <img src="@/assets/Logo.png" class="img-fluid rounded" alt="Introduction Image">
+              <img src="@/assets/logo1.png" class="img-fluid rounded" alt="Introduction Image">
             </div>
           </div>
         </div>

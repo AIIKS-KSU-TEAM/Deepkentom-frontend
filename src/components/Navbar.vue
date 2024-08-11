@@ -1,12 +1,12 @@
 <script setup>
-import logo from '@/assets/Logo.png';
+import logo from '@/assets/logo1.png';
 </script>
 
 <template>
   <!-- Main Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-secondary-subtle">
     <div class="container-fluid">
-        <img :src="logo" alt="Logo" style="height: 40px;">
+      <img :src="logo" alt="Logo" style="height: 40px; margin-left: 30px">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -20,6 +20,9 @@ import logo from '@/assets/Logo.png';
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/blog">Blog</a>
@@ -44,7 +47,7 @@ import logo from '@/assets/Logo.png';
             <a class="nav-link dropdown-toggle" href="#" id="cvDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Computer Vision
             </a>
-            <ul class="dropdown-menu bg-secondary-subtle bg-secondary-subtle" aria-labelledby="cvDropdown">
+            <ul class="dropdown-menu bg-secondary-subtle" aria-labelledby="cvDropdown">
               <li><router-link class="dropdown-item" to="/object-detection">Object Detection</router-link></li>
               <li><router-link class="dropdown-item" to="/image-recognition">Image Recognition</router-link></li>
               <li><router-link class="dropdown-item" to="/facial-recognition">Facial Recognition</router-link></li>
@@ -108,4 +111,3 @@ import logo from '@/assets/Logo.png';
     </div>
   </nav>
 </template>
-

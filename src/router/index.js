@@ -10,6 +10,7 @@ import PostListComponent from '../components/PostList.vue';
 import PostDetailComponent from '../components/PostDetail.vue'; 
 import CreatePost from '../components/CreatePost.vue';
 import About from '@/components/About.vue'
+import Projects from '@/components/Projects.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,6 +29,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: Projects
     },
     {
       path: '/services',
