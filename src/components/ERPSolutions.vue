@@ -1,7 +1,7 @@
 <template>
     <div class="container mt-4">
       <div class="text-center mb-4">
-        <img src="@/assets/Logo.png" class="img-fluid mb-3" alt="ERP Solutions" />
+        <img src="@/assets/enterprise_software.jpeg" class="img-fluid mb-3" alt="ERP Solutions" />
         <h2>ERP Solutions</h2>
         <p class="lead">
           We maximize efficiency and improve decision-making with our comprehensive ERP
@@ -19,3 +19,8 @@
   const name = 'ERPSolutions';
   </script>
   
+  <style scoped>
+  img{
+    border-radius: 5px;
+  }
+  </style>

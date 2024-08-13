@@ -69,7 +69,10 @@ onMounted(() => {
       </header>
       
       <!-- Main Content -->
-      <div class="mx-3 mt-5">
+      <div class="mx-3 mt-3">
+        <h2 class="text-center text-dark mb-2">Our Blogs</h2>
+        <hr class="bg-warning mx-auto" style="width: 50px;">
+
         <div class="row">
           <!-- Blog Posts -->
           <div class="col-md-8">

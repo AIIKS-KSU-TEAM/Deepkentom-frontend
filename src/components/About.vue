@@ -18,7 +18,7 @@
             </p>
           </div>
           <div class="col-md-6">
-            <img src="@/assets/Logo.png" class="img-fluid rounded" alt="About DeepKentom">
+            <img src="@/assets/dp.jpg" class="img-fluid rounded" alt="About DeepKentom">
           </div>
         </div>
   
@@ -52,7 +52,7 @@
             </p>
           </div>
           <div class="col-md-6">
-            <img src="@/assets/Logo.png" class="img-fluid rounded" alt="Customer-Centric Approach">
+            <img src="@/assets/cc.jpg" class="img-fluid rounded" alt="Customer-Centric Approach">
           </div>
         </div>
   
@@ -69,7 +69,7 @@
             </p>
           </div>
           <div class="col-md-6 order-md-1">
-            <img src="@/assets/Logo.png" class="img-fluid rounded" alt="Commitment to Quality">
+            <img src="@/assets/image.jpg" class="img-fluid rounded" alt="Commitment to Quality">
           </div>
         </div>
       </div>
@@ -94,5 +94,6 @@
   p {
     color: #34495e;
   }
+  
   </style>
   

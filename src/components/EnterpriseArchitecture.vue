@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-4">
     <div class="text-center mb-4">
-      <img src="@/assets/Logo.png" class="img-fluid mb-3" alt="Enterprise Architecture Designs" />
+      <img src="@/assets/enterprise.png" class="img-fluid mb-3" alt="Enterprise Architecture Designs" />
       <h2>Enterprise Architecture Designs</h2>
       <p class="lead">
         Building resilient and adaptable IT Architectures that align with your business

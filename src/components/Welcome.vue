@@ -1,6 +1,20 @@
 <script setup>
 import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
+import { ref, onMounted } from 'vue';
+
+import hero1 from '@/assets/hero1.jpg';
+import hero2 from '@/assets/logo2.jpg';
+import hero3 from '@/assets/hero3.jpg';
+
+const images = [hero1, hero2, hero3];
+const currentImageIndex = ref(0);
+
+onMounted(() => {
+  setInterval(() => {
+    currentImageIndex.value = (currentImageIndex.value + 1) % images.length;
+  }, 5000); 
+});
 </script>
 
 <template>
@@ -11,7 +25,7 @@ import Footer from './Footer.vue';
 
     <main>
       <!-- Hero Section -->
-      <section class="hero d-flex align-items-center">
+      <section class="hero d-flex align-items-center" :style="{ backgroundImage: `url(${images[currentImageIndex]})` }">
         <div class="hero-overlay"></div>
         <div class="container text-center text-white">
           <h1 class="display-4">DeepKentom - Driving Innovation in AI for Businesses</h1>
@@ -48,10 +62,10 @@ import Footer from './Footer.vue';
 <style scoped>
 .hero {
   position: relative;
-  background: url("../src/assets/hero1.jpg") no-repeat center center;
   background-size: cover;
   height: 80vh;
   overflow: hidden;
+  transition: background-image 1s ease-in-out;
 }
 
 .hero-overlay {
