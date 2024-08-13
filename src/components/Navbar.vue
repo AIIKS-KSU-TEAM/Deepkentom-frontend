@@ -43,67 +43,64 @@ import logo from '@/assets/logo1.png';
       </button>
       <div class="collapse navbar-collapse" id="secondaryNavbar">
         <ul class="navbar-nav mx-auto">
+          <!-- Computer Vision Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="cvDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Computer Vision
             </a>
             <ul class="dropdown-menu bg-secondary-subtle" aria-labelledby="cvDropdown">
-              <li><router-link class="dropdown-item" to="/object-detection">Object Detection</router-link></li>
-              <li><router-link class="dropdown-item" to="/image-recognition">Image Recognition</router-link></li>
-              <li><router-link class="dropdown-item" to="/facial-recognition">Facial Recognition</router-link></li>
-              <li><router-link class="dropdown-item" to="/visual-search">Visual Search</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Object Detection</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Image Recognition</router-link></li>
             </ul>
           </li>
+          <!-- ML for Healthcare Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="mlHealthcareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               ML for Healthcare
             </a>
             <ul class="dropdown-menu bg-secondary-subtle" aria-labelledby="mlHealthcareDropdown">
-              <li><router-link class="dropdown-item" to="/medical-image-analysis">Medical Image Analysis</router-link></li>
-              <li><router-link class="dropdown-item" to="/predictive-modeling">Predictive Modeling</router-link></li>
-              <li><router-link class="dropdown-item" to="/drug-discovery">Drug Discovery</router-link></li>
-              <li><router-link class="dropdown-item" to="/personalized-medicine">Personalized Medicine</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Medical Image Analysis</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Predictive Modeling</router-link></li>
             </ul>
           </li>
+          <!-- AI Ethics and Fairness Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="aiEthicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              AI Ethics and Fairness
+              AI Ethics
             </a>
             <ul class="dropdown-menu bg-secondary-subtle" aria-labelledby="aiEthicsDropdown">
-              <li><router-link class="dropdown-item" to="/bias-fairness">Bias and Fairness</router-link></li>
-              <li><router-link class="dropdown-item" to="/ethical-ai">Ethical AI</router-link></li>
-              <li><router-link class="dropdown-item" to="/explainable-ai">Explainable AI</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Bias and Fairness</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Ethical AI</router-link></li>
             </ul>
           </li>
+          <!-- AI in Agriculture Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="aiAgriDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               AI in Agriculture
             </a>
             <ul class="dropdown-menu bg-secondary-subtle" aria-labelledby="aiAgriDropdown">
-              <li><router-link class="dropdown-item" to="/market-demand">Market Demand</router-link></li>
-              <li><router-link class="dropdown-item" to="/risk-management">Risk Management</router-link></li>
-              <li><router-link class="dropdown-item" to="/breeding-seeds">Breeding Seeds</router-link></li>
-              <li><router-link class="dropdown-item" to="/soil-health">Soil Health Monitoring</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Market Demand</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Soil Health Monitoring</router-link></li>
             </ul>
           </li>
+          <!-- Enterprise Architecture Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="enterpriseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Enterprise Architecture
             </a>
             <ul class="dropdown-menu bg-secondary-subtle" aria-labelledby="enterpriseDropdown">
-              <li><router-link class="dropdown-item" to="/it-architecture">IT Architecture</router-link></li>
-              <li><router-link class="dropdown-item" to="/resilient-systems">Resilient Systems</router-link></li>
-              <li><router-link class="dropdown-item" to="/scalable-solutions">Scalable Solutions</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">IT Architecture</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Scalable Solutions</router-link></li>
             </ul>
           </li>
+          <!-- ERP Solutions Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="erpDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               ERP Solutions
             </a>
             <ul class="dropdown-menu bg-secondary-subtle" aria-labelledby="erpDropdown">
-              <li><router-link class="dropdown-item" to="/integration">Integration</router-link></li>
-              <li><router-link class="dropdown-item" to="/optimization">Optimization</router-link></li>
-              <li><router-link class="dropdown-item" to="/decision-support">Decision Support</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Integration</router-link></li>
+              <li><router-link class="dropdown-item" to="/services">Optimization</router-link></li>
             </ul>
           </li>
         </ul>
