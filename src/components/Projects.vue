@@ -1,20 +1,24 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
-import Navbar from './Navbar.vue';
-import Footer from './Footer.vue';
+import { ref, onMounted } from "vue";
+import axios from "axios";
+import Navbar from "./Navbar.vue";
+import Footer from "./Footer.vue";
 
 const projects = ref([]);
 const clients = ref([]);
 
 const fetchProjectsAndClients = async () => {
   try {
-    const projectResponse = await axios.get('http://127.0.0.1:8000/api/projects/');
-    const clientResponse = await axios.get('http://127.0.0.1:8000/api/clients/');
+    const projectResponse = await axios.get(
+      "http://127.0.0.1:8000/api/projects/",
+    );
+    const clientResponse = await axios.get(
+      "http://127.0.0.1:8000/api/clients/",
+    );
     projects.value = projectResponse.data;
     clients.value = clientResponse.data;
   } catch (error) {
-    console.error('Failed to fetch data:', error);
+    console.error("Failed to fetch data:", error);
   }
 };
 
@@ -38,10 +42,14 @@ onMounted(() => {
 
   <div class="container mt-4">
     <h2 class="text-center">Portfolio</h2>
-    <hr class="bg-warning mx-auto mb-5" style="width: 50px;">
+    <hr class="bg-warning mx-auto mb-5" style="width: 50px" />
     <div class="row">
       <!-- Project Details -->
-      <div v-for="(project, index) in projects" :key="index" class="col-md-6 mb-4">
+      <div
+        v-for="(project, index) in projects"
+        :key="index"
+        class="col-md-6 mb-4"
+      >
         <div class="card shadow-lg">
           <img :src="project.image" class="card-img-top" :alt="project.name" />
           <div class="card-body">
@@ -59,7 +67,10 @@ onMounted(() => {
                 {{ project.completion }}%
               </div>
             </div>
-            <p><strong>Completed:</strong> {{ project.completed }} / {{ project.total }}</p>
+            <p>
+              <strong>Completed:</strong> {{ project.completed }} /
+              {{ project.total }}
+            </p>
           </div>
         </div>
       </div>
@@ -67,7 +78,7 @@ onMounted(() => {
 
     <!-- Client Satisfaction -->
     <h2 class="text-center mt-5">Reviews</h2>
-    <hr class="bg-warning mx-auto mb-5" style="width: 50px;">
+    <hr class="bg-warning mx-auto mb-5" style="width: 50px" />
 
     <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -84,8 +95,20 @@ onMounted(() => {
                   <p class="card-text">{{ client.comment }}</p>
                   <p><strong>Satisfaction:</strong></p>
                   <div>
-                    <span v-for="(filled, index) in starArray(getStarRating(client.satisfaction))" :key="index">
-                      <i class="bi" :class="filled ? 'bi-star-fill text-warning' : 'bi-star text-secondary'"></i>
+                    <span
+                      v-for="(filled, index) in starArray(
+                        getStarRating(client.satisfaction),
+                      )"
+                      :key="index"
+                    >
+                      <i
+                        class="bi"
+                        :class="
+                          filled
+                            ? 'bi-star-fill text-warning'
+                            : 'bi-star text-secondary'
+                        "
+                      ></i>
                     </span>
                     ({{ getStarRating(client.satisfaction).toFixed(1) }}/5)
                   </div>
@@ -97,11 +120,21 @@ onMounted(() => {
       </div>
 
       <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#clientCarousel"
+        data-bs-slide="prev"
+      >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#clientCarousel"
+        data-bs-slide="next"
+      >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
