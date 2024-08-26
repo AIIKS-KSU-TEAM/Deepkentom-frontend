@@ -1,5 +1,6 @@
 <script setup>
 import TheNavbar from "@/components/TheNavbar.vue";
+import TheFooter from "@/components/TheFooter.vue";
 import TheTestimonialsSection from "@/components/TheTestimonialsSection.vue";
 </script>
 
@@ -186,4 +187,5 @@ import TheTestimonialsSection from "@/components/TheTestimonialsSection.vue";
 
     <the-testimonials-section />
   </main>
+  <the-footer />
 </template>

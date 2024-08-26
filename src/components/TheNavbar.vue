@@ -25,6 +25,9 @@
             <a class="nav-link" aria-current="page" href="#">About Us</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#">Services</a>
           </li>
           <li class="nav-item">
