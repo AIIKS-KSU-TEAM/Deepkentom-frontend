@@ -88,8 +88,8 @@ onMounted(() => {
           :class="['carousel-item', { active: index === 0 }]"
         >
           <div class="d-flex justify-content-center">
-            <div class="col-md-6">
-              <div class="card shadow-lg">
+            <div class="col-md-8">
+              <div class="card shadow-sm">
                 <div class="card-body">
                   <h5 class="card-title">{{ client.name }}</h5>
                   <p class="card-text">{{ client.comment }}</p>
