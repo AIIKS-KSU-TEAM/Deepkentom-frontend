@@ -1,15 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Contact from "@/components/Contact.vue";
-import Services from "@/components/Services.vue";
-import SoftwareSolutions from "@/components/SoftwareSolutions.vue";
-import ConsultancyAndResearch from "@/components/ConsultancyAndResearch.vue";
-import EnterpriseArchitecture from "@/components/EnterpriseArchitecture.vue";
-import ERPSolutions from "@/components/ERPSolutions.vue";
-import PostListComponent from "../components/PostList.vue";
-import PostDetailComponent from "../components/PostDetail.vue";
-import CreatePost from "../components/CreatePost.vue";
-import About from "@/components/About.vue";
-import Projects from "@/components/Projects.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,60 +9,34 @@ const router = createRouter({
       component: () => import("@/views/HomeView.vue"),
     },
     {
-      path: "/about",
-      name: "about",
-      component: About,
+      path: "/about-us",
+      name: "about-us",
+      component: () => import("@/views/AboutView.vue"),
     },
     {
-      path: "/contact",
-      name: "contact",
-      component: Contact,
+      path: "/contact-us",
+      name: "contact-us",
+      component: () => import("@/views/ContactView.vue"),
     },
     {
       path: "/projects",
       name: "projects",
-      component: Projects,
+      component: () => import("@/views/ProjectsView.vue"),
     },
     {
       path: "/services",
       name: "services",
-      component: Services,
-    },
-    {
-      path: "/software-solutions",
-      name: "SoftwareSolutions",
-      component: SoftwareSolutions,
-    },
-    {
-      path: "/consultancy-and-research",
-      name: "ConsultancyAndResearch",
-      component: ConsultancyAndResearch,
-    },
-    {
-      path: "/enterprise-architecture",
-      name: "EnterpriseArchitecture",
-      component: EnterpriseArchitecture,
-    },
-    {
-      path: "/erp-solutions",
-      name: "ERPSolutions",
-      component: ERPSolutions,
-    },
-    {
-      path: "/create-post",
-      name: "CreatePost",
-      component: CreatePost,
+      component: () => import("@/views/ServicesView.vue"),
     },
     {
       path: "/blog",
       name: "PostList",
-      component: PostListComponent,
+      component: () => import("@/views/blog/ListView.vue"),
     },
     {
       path: "/blog/post/:year/:month/:day/:slug",
       name: "PostDetail",
-      component: PostDetailComponent,
-      props: true,
+      component: () => import("@/views/blog/DetailView.vue"),
     },
   ],
 });

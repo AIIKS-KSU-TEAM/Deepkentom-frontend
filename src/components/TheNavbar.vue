@@ -1,13 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary py-4">
     <div class="container">
-      <a
-        class="navbar-brand d-inline-flex fw-bold fs-4"
-        href="{% url 'welcome' %}"
-      >
+      <router-link class="navbar-brand d-inline-flex fw-bold fs-4" to="/">
         <span>Deep</span>
         <span class="text-primary">Kentom</span>
-      </a>
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -22,20 +19,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">About Us</a>
+            <router-link class="nav-link" aria-current="page" to="/about-us"
+              >About Us</router-link
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Contact Us</a>
+            <router-link class="nav-link" aria-current="page" to="/services"
+              >Services</router-link
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Services</a>
+            <router-link class="nav-link" aria-current="page" to="/projects"
+              >Projects</router-link
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Projects</a>
+            <router-link class="nav-link" aria-current="page" to="/blog"
+              >Blog</router-link
+            >
           </li>
         </ul>
         <div class="d-inline-flex gap-3">
-          <a href="#" class="btn btn-primary rounded-pill">Contact Us</a>
+          <router-link to="/contact-us" class="btn btn-primary rounded-pill"
+            >Contact Us</router-link
+          >
         </div>
       </div>
     </div>

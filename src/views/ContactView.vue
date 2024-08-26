@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
-import Navbar from "./Navbar.vue";
-import Footer from "./Footer.vue";
+import TheNavbar from "@/components/TheNavbar.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 // Refs for form data
 const name = ref("");
@@ -110,8 +110,6 @@ const submitForm = async (event) => {
         </div>
       </div>
     </div>
-    <footer class="mt-5">
-      <the-footer />
-    </footer>
+    <the-footer />
   </div>
 </template>
