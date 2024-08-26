@@ -1,7 +1,10 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary py-4">
     <div class="container">
-      <a class="navbar-brand d-inline-flex fw-bold" href="{% url 'welcome' %}">
+      <a
+        class="navbar-brand d-inline-flex fw-bold fs-4"
+        href="{% url 'welcome' %}"
+      >
         <span>Deep</span>
         <span class="text-primary">Kentom</span>
       </a>
@@ -29,7 +32,7 @@
           </li>
         </ul>
         <div class="d-inline-flex gap-3">
-          <a href="#" class="btn btn-primary">Contact Us.</a>
+          <a href="#" class="btn btn-primary rounded-pill">Contact Us</a>
         </div>
       </div>
     </div>
