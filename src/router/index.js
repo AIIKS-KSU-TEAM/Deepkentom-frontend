@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Welcome from "@/components/Welcome.vue";
 import Contact from "@/components/Contact.vue";
 import Services from "@/components/Services.vue";
 import SoftwareSolutions from "@/components/SoftwareSolutions.vue";
@@ -18,7 +17,7 @@ const router = createRouter({
     {
       path: "/",
       name: "welcome",
-      component: Welcome,
+      component: () => import("@/views/HomeView.vue"),
     },
     {
       path: "/about",

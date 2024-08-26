@@ -2,7 +2,7 @@
   <div class="container mt-4">
     <div class="text-center mb-4">
       <img
-        src="@/assets/enterprise.png"
+        src="@/assets/images/services-image.png"
         class="img-fluid mb-3"
         alt="Enterprise Architecture Designs"
       />
