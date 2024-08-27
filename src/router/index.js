@@ -30,12 +30,12 @@ const router = createRouter({
     },
     {
       path: "/blog",
-      name: "PostList",
+      name: "blog-list",
       component: () => import("@/views/blog/ListView.vue"),
     },
     {
-      path: "/blog/post/:year/:month/:day/:slug",
-      name: "PostDetail",
+      path: "/blog/:slug",
+      name: "blog-detail",
       component: () => import("@/views/blog/DetailView.vue"),
     },
   ],
