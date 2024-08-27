@@ -4,6 +4,7 @@ import apiClient from "@/api/axiosConfig";
 export default function usePosts() {
   const posts_data = ref(null);
   const post = ref(null);
+  const newComment = ref(null);
 
   const fetchPosts = async ({ page = null } = {}) => {
     try {
@@ -29,10 +30,26 @@ export default function usePosts() {
     }
   };
 
+  const submitPostComment = async (postSlug, { name, email, content }) => {
+    try {
+      const response = await apiClient.post(`posts/${postSlug}/comment/`, {
+        name,
+        email,
+        content,
+      });
+
+      newComment.value = response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return {
     post,
     posts_data,
     fetchPosts,
     fetchPostBySlug,
+    newComment,
+    submitPostComment,
   };
 }

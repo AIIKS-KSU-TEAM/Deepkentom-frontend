@@ -46,7 +46,7 @@ watch(
 );
 </script>
 <template>
-  <header>
+  <header class="border-bottom">
     <the-navbar />
   </header>
   <main>

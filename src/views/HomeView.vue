@@ -178,8 +178,10 @@ import TheTestimonialsSection from "@/components/TheTestimonialsSection.vue";
         </div>
 
         <div class="mt-5">
-          <a href="#" class="btn btn-outline-primary rounded-pill px-4 py-2"
-            >Read more</a
+          <router-link
+            to="/blog"
+            class="btn btn-outline-primary rounded-pill px-4 py-2"
+            >Read more</router-link
           >
         </div>
       </div>

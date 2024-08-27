@@ -1,8 +1,8 @@
 <script setup>
 import TheNavbar from "@/components/TheNavbar.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import AddPostComment from "@/components/AddPostComment.vue";
 import { ref, onMounted, computed } from "vue";
-import axios from "axios";
 import { useRoute } from "vue-router";
 import moment from "moment";
 import usePosts from "@/composables/posts";
@@ -23,81 +23,25 @@ const route = useRoute();
 onMounted(async () => {
   fetchPostBySlug(route.params.slug);
 });
-
-const submitComment = async () => {
-  try {
-    comment.value.post = post.value.id;
-    await axios.post(
-      `http://localhost:8000/blog/post/${post.value.id}/comments/`,
-      comment.value,
-    );
-
-    comment.value.name = "";
-    comment.value.email = "";
-    comment.value.content = "";
-    fetchComments();
-  } catch (error) {
-    console.error("Error submitting comment:", error);
-  }
-};
 </script>
 <template>
-  <header>
+  <header class="border-bottom">
     <the-navbar />
   </header>
   <main>
     <div v-if="post" class="container py-4">
       <div v-if="post">
         <h1>{{ post.title }}</h1>
-        <p class="date">
-          Published on {{ post.publish }} by {{ post.author_username }}
-        </p>
-        <p v-html="post.body" class="fs-5 fw-light lh-base"></p>
+        <div>
+          <div>By {{ post.author_username }}</div>
+          <div class="text-muted fs-5">
+            {{ moment(post.publish).format("MMM DD YYYY") }}
+          </div>
+        </div>
+        <p v-html="post.body"></p>
       </div>
 
-      <!-- Comment Form -->
-      <div class="card shadow-none mt-3">
-        <div class="card-body">
-          <h3 class="card-title">Leave a Comment</h3>
-          <form @submit.prevent="submitComment" class="row row-cols-1 g-3">
-            <div class="col">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                v-model="comment.name"
-                required
-              />
-            </div>
-            <div class="col">
-              <label for="email">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                v-model="comment.email"
-                required
-              />
-            </div>
-            <div class="col">
-              <label for="content">Comment</label>
-              <textarea
-                class="form-control"
-                id="content"
-                rows="3"
-                v-model="comment.content"
-                required
-              ></textarea>
-            </div>
-            <div class="col">
-              <button type="submit" class="btn btn-outline-secondary mt-2">
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <add-post-comment :post="post" />
 
       <!-- Display Comments -->
       <div class="card mt-4" v-if="comments.length > 0">
