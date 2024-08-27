@@ -12,18 +12,18 @@
               <p>Building elegant softwares since June 2024</p>
             </div>
             <div class="mt-3 d-flex gap-3">
-              <a href="#" class="text-decoration-none"
+              <router-link to="#" class="text-decoration-none"
                 ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="#" class="text-decoration-none"
+              ></router-link>
+              <router-link to="#" class="text-decoration-none"
                 ><i class="bi bi-twitter"></i
-              ></a>
-              <a href="#" class="text-decoration-none"
+              ></router-link>
+              <router-link to="#" class="text-decoration-none"
                 ><i class="bi bi-instagram"></i
-              ></a>
-              <a href="#" class="text-decoration-none"
+              ></router-link>
+              <router-link to="#" class="text-decoration-none"
                 ><i class="bi bi-linkedin"></i
-              ></a>
+              ></router-link>
             </div>
           </div>
           <div class="col">
@@ -38,23 +38,38 @@
             <h5>Company</h5>
             <ul class="list-unstyled d-flex flex-column gap-2">
               <li>
-                <a href="#" class="text-decoration-none text-body link-primary"
-                  >About Us</a
+                <router-link
+                  to="/about-us"
+                  class="text-decoration-none text-body link-primary"
+                  >About Us</router-link
                 >
               </li>
               <li>
-                <a href="#" class="text-decoration-none text-body link-primary"
-                  >Contact Us</a
+                <router-link
+                  to="/contact-us"
+                  class="text-decoration-none text-body link-primary"
+                  >Contact Us</router-link
                 >
               </li>
               <li>
-                <a href="#" class="text-decoration-none text-body link-primary"
-                  >Blog</a
+                <router-link
+                  to="/services"
+                  class="text-decoration-none text-body link-primary"
+                  >Services</router-link
                 >
               </li>
               <li>
-                <a href="#" class="text-decoration-none text-body link-primary"
-                  >Projects</a
+                <router-link
+                  to="/blog"
+                  class="text-decoration-none text-body link-primary"
+                  >Blog</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  to="/projects"
+                  class="text-decoration-none text-body link-primary"
+                  >Projects</router-link
                 >
               </li>
             </ul>
@@ -73,18 +88,18 @@
               </li>
             </ul>
             <div class="d-inline-flex gap-3">
-              <a href="#" class="text-decoration-none"
+              <router-link to="#" class="text-decoration-none"
                 ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="#" class="text-decoration-none"
+              ></router-link>
+              <router-link to="#" class="text-decoration-none"
                 ><i class="bi bi-twitter"></i
-              ></a>
-              <a href="#" class="text-decoration-none"
+              ></router-link>
+              <router-link to="#" class="text-decoration-none"
                 ><i class="bi bi-instagram"></i
-              ></a>
-              <a href="#" class="text-decoration-none"
+              ></router-link>
+              <router-link to="#" class="text-decoration-none"
                 ><i class="bi bi-linkedin"></i
-              ></a>
+              ></router-link>
             </div>
           </div>
         </div>
