@@ -38,7 +38,7 @@ const submitForm = async (event) => {
 </script>
 
 <template>
-  <header>
+  <header class="border-bottom">
     <the-navbar />
   </header>
   <div class="contact">

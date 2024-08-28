@@ -5,7 +5,7 @@ import TheFooter from "@/components/TheFooter.vue";
 
 <template>
   <div>
-    <header>
+    <header class="border-bottom">
       <the-navbar />
     </header>
 

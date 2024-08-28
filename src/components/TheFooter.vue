@@ -2,8 +2,10 @@
   <footer class="py-5">
     <div class="container">
       <div class="top border-bottom pb-5">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-          <div class="col">
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3"
+        >
+          <div class="col h-100">
             <div class="d-flex fs-5 fw-bolder">
               <span>Deep</span>
               <span class="text-primary">Kentom</span>
@@ -26,7 +28,7 @@
               ></router-link>
             </div>
           </div>
-          <div class="col">
+          <div class="col h-100">
             <h5>Services</h5>
             <ul class="list-unstyled d-flex flex-column gap-2">
               <li>Software Solutions</li>
@@ -34,7 +36,7 @@
               <li>Research & Consultuncy</li>
             </ul>
           </div>
-          <div class="col">
+          <div class="col h-100">
             <h5>Company</h5>
             <ul class="list-unstyled d-flex flex-column gap-2">
               <li>
@@ -74,7 +76,7 @@
               </li>
             </ul>
           </div>
-          <div class="col">
+          <div class="col h-100">
             <h5>Contact Us</h5>
             <ul class="list-unstyled d-flex flex-column gap-2">
               <li class="d-inline-flex gap-1">

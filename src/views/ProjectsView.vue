@@ -28,27 +28,29 @@ onMounted(() => {
 });
 </script>
 <template>
-  <header>
+  <header class="border-bottom">
     <the-navbar />
   </header>
-  <main>
+  <main class="my-4">
     <div class="container mt-4">
-      <h2 class="text-center">Portfolio</h2>
-      <hr class="bg-warning mx-auto mb-5" style="width: 50px" />
-      <div class="row">
-        <!-- Project Details -->
-        <div
-          v-for="(project, index) in projects"
-          :key="index"
-          class="col-md-6 mb-4"
-        >
-          <div class="card shadow-lg">
-            <img
-              :src="project.image"
-              class="card-img-top"
-              :alt="project.name"
-            />
-            <div class="card-body">
+      <h1>Projects</h1>
+    </div>
+
+    <div class="row row-cols-1 gx-0 gy-5">
+      <section v-for="(project, index) in projects" :key="index" class="col">
+        <div class="container">
+          <div
+            class="row row-cols-1 row-cols-md-2 g-5 align-items-center py-3 py-md-5"
+            :class="[index % 2 === 0 ? 'flex-md-row' : 'flex-md-row-reverse']"
+          >
+            <div class="col">
+              <img
+                :src="project.image"
+                class="card-img-top"
+                :alt="project.name"
+              />
+            </div>
+            <div class="col">
               <h5 class="card-title">{{ project.name }}</h5>
               <p class="card-text">{{ project.description }}</p>
               <div class="progress mb-2">
@@ -64,13 +66,14 @@ onMounted(() => {
                 </div>
               </div>
               <p>
-                <strong>Completed:</strong> {{ project.completed }} /
-                {{ project.total }}
+                <strong>Completion:</strong>
+                <span>{{ project.completed }}</span> /
+                <span>{{ project.total }}</span>
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
 
     <the-testimonials-section />

@@ -11,7 +11,7 @@ import { ref } from "vue";
 const activeTab = ref("software-solutions");
 </script>
 <template>
-  <header>
+  <header class="border-bottom">
     <the-navbar />
   </header>
   <main>
