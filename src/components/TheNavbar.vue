@@ -19,24 +19,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link class="nav-link" aria-current="page" to="/about-us"
-              >About Us</router-link
-            >
+            <router-link class="nav-link" to="/about-us">About Us</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" aria-current="page" to="/services"
-              >Services</router-link
-            >
+            <router-link class="nav-link" to="/services">Services</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" aria-current="page" to="/projects"
-              >Projects</router-link
-            >
+            <router-link class="nav-link" to="/projects">Projects</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" aria-current="page" to="/blog"
-              >Blog</router-link
-            >
+            <router-link class="nav-link" to="/blog">Blog</router-link>
           </li>
         </ul>
         <div class="d-inline-flex gap-3">
