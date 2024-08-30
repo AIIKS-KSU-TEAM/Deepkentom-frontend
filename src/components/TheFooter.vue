@@ -65,14 +65,17 @@
           <div class="col h-100">
             <h5>Contact Us</h5>
             <ul class="list-unstyled d-flex flex-column gap-2">
-              <li class="d-inline-flex gap-1">
-                <i class="bi bi-geo-alt"></i>408-40200, Kisii, Kenya
+              <li class="d-inline-flex gap-1 align-items-center">
+                <font-awesome-icon icon="map-pin" />
+                <span>Keumbu, Kisii, Kenya</span>
               </li>
-              <li class="d-inline-flex gap-1">
-                <i class="bi bi-telephone"></i>+254 114 290 760
+              <li class="d-inline-flex gap-1 align-items-center">
+                <font-awesome-icon icon="phone" />
+                <span>+254 114 290 760</span>
               </li>
-              <li class="d-inline-flex gap-1">
-                <i class="bi bi-envelope"></i>deepkentom@gmail.com
+              <li class="d-inline-flex gap-1 align-items-center">
+                <font-awesome-icon icon="envelope" />
+                <span>deepkentom@gmail.com</span>
               </li>
             </ul>
 

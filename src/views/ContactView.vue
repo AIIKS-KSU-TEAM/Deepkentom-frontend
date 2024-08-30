@@ -48,7 +48,7 @@ const submitForm = async (event) => {
 
     <section class="py-3 py-md-5">
       <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 g-md-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-md-5">
           <div class="col">
             <div class="h-100 bg-body-secondary p-3 p-md-5 rounded">
               <div class="card-body">

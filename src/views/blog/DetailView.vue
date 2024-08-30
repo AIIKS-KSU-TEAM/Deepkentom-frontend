@@ -41,25 +41,7 @@ onMounted(async () => {
         <p v-html="post.body"></p>
       </div>
 
-      <add-post-comment :post="post" />
-
-      <!-- Display Comments -->
-      <div class="card mt-4" v-if="comments.length > 0">
-        <div class="card-body">
-          <h3 class="card-title">Comments ({{ comments.length }})</h3>
-          <ul class="list-unstyled">
-            <li v-for="(comment, index) in comments" :key="index">
-              <p>
-                <strong>{{ comment.name }}</strong> - {{ comment.email }}
-              </p>
-              <p>{{ comment.content }}</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div v-else>
-        <p>No comments yet.</p>
-      </div>
+      <!-- <add-post-comment :post="post" /> -->
     </div>
   </main>
   <the-footer />
