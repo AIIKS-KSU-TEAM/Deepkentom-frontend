@@ -34,14 +34,10 @@ onMounted(async () => {
                 <div>
                   <div class="d-inline-flex gap-1">
                     <span v-for="(filled, index) in starArray(5)" :key="index">
-                      <i
-                        class="bi"
-                        :class="
-                          filled
-                            ? 'bi-star-fill text-warning'
-                            : 'bi-star text-secondary'
-                        "
-                      ></i>
+                      <font-awesome-icon
+                        :icon="['fas', 'star']"
+                        :class="filled ? 'text-warning' : 'text-secondary'"
+                      />
                     </span>
                     ({{ testimonial.satisfaction }}/5)
                   </div>
