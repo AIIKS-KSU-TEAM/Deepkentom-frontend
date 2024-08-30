@@ -44,11 +44,7 @@ onMounted(() => {
             :class="[index % 2 === 0 ? 'flex-md-row' : 'flex-md-row-reverse']"
           >
             <div class="col">
-              <img
-                :src="project.image"
-                class="card-img-top"
-                :alt="project.name"
-              />
+              <img :src="project.image" class="w-100" :alt="project.name" />
             </div>
             <div class="col">
               <h5 class="card-title">{{ project.name }}</h5>
