@@ -41,75 +41,134 @@ const submitForm = async (event) => {
   <header class="border-bottom">
     <the-navbar />
   </header>
-  <div class="contact">
-    <div class="container py-4">
-      <div class="row">
-        <!-- Contact Form -->
-        <div class="col-md-6 mb-4 mb-md-0">
-          <h2 class="h2 mb-4">Contact Us</h2>
-          <hr class="bg-warning w-25 mx-auto mx-md-0" />
-          <form @submit="submitForm">
-            <div v-if="formMessage" :class="['alert', alertType]" role="alert">
-              {{ formMessage }}
-            </div>
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input
-                type="text"
-                class="form-control border-secondary shadow-sm"
-                id="name"
-                v-model="name"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input
-                type="email"
-                class="form-control border-secondary shadow-sm"
-                id="email"
-                v-model="email"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea
-                class="form-control border-secondary shadow-sm"
-                id="message"
-                v-model="message"
-                rows="4"
-                placeholder="Your Message"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-secondary w-100">
-              Send Message
-            </button>
-          </form>
-        </div>
+  <main class="py-4">
+    <div class="container">
+      <h1>Contact Us</h1>
+    </div>
 
-        <!-- Map -->
-        <div class="col-md-6">
-          <h2 class="h2 mb-4">Our Location</h2>
-          <hr class="bg-warning w-25 mx-auto mx-md-0" />
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.8217088203!2d34.781737376012316!3d-0.6923034873102553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b3f6840164ff1%3A0x8040e0d2e546b570!2sKisii%20University%20Main%20Campus!5e0!3m2!1sen!2ske!4v1723017296428!5m2!1sen!2ske"
-              class="embed-responsive-item"
-              width="100%"
-              height="300"
-              style="border-radius: 5px"
-              allowfullscreen=""
-              loading="lazy"
-            >
-            </iframe>
+    <section class="py-3 py-md-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 g-md-5">
+          <div class="col">
+            <div class="h-100 bg-body-secondary p-3 p-md-5 rounded">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center gap-4">
+                  <font-awesome-icon icon="phone" size="2x" />
+                  <span class="fs-4 fw-bold">+254 114 290 760</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="h-100 bg-body-secondary p-3 p-md-5 rounded">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center gap-4">
+                  <font-awesome-icon icon="envelope" size="2x" />
+                  <span class="fs-4 fw-bold">deepkentom@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="h-100 bg-body-secondary p-3 p-md-5 rounded">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center gap-4">
+                  <font-awesome-icon icon="map-pin" size="2x" />
+                  <span class="fs-4 fw-bold">Keumbu, Kisii, Kenya</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <the-footer />
-  </div>
+    </section>
+
+    <section class="py-3 py-md-5">
+      <div class="container">
+        <h2>Leave A Message</h2>
+        <form
+          @submit.prevent="submitForm"
+          class="mt-3 mt-md-4 row row-cols-1 gap-3 gap-md-4"
+        >
+          <div v-if="formMessage" class="col">
+            <div :class="['alert', alertType]" role="alert">
+              {{ formMessage }}
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-floating">
+              <input
+                type="text"
+                id="name"
+                v-model="name"
+                class="form-control"
+                placeholder="Name"
+                autocomplete="name"
+                required
+              />
+              <label for="name">Name</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-floating">
+              <input
+                type="email"
+                id="email"
+                v-model="email"
+                class="form-control"
+                placeholder="Email Address"
+                autocomplete="email"
+                required
+              />
+              <label for="email">Email Address</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-floating">
+              <textarea
+                id="message"
+                v-model="message"
+                class="form-control"
+                placeholder="Message"
+                rows="4"
+                required
+                autocomplete="message"
+              />
+              <label for="message">Message</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <button
+              type="submit"
+              class="btn btn-outline-primary rounded-pill w-100 w-sm-auto"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="py-3 py-md-5">
+      <div class="container">
+        <h2>Visit Us</h2>
+
+        <div class="mt-3 mt-md-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.8217088203!2d34.781737376012316!3d-0.6923034873102553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b3f6840164ff1%3A0x8040e0d2e546b570!2sKisii%20University%20Main%20Campus!5e0!3m2!1sen!2ske!4v1723017296428!5m2!1sen!2ske"
+            class="w-100 rounded"
+            width="100%"
+            height="320"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+  <the-footer />
 </template>

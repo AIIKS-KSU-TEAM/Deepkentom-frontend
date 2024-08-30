@@ -32,11 +32,11 @@ onMounted(() => {
     <the-navbar />
   </header>
   <main class="mt-4">
-    <div class="container mt-4">
+    <div class="container">
       <h1>Projects</h1>
     </div>
 
-    <div class="row row-cols-1 gx-0 gy-5">
+    <div v-if="projects?.length" class="row row-cols-1 gx-0 gy-5">
       <section v-for="(project, index) in projects" :key="index" class="col">
         <div class="container">
           <div
@@ -71,6 +71,11 @@ onMounted(() => {
         </div>
       </section>
     </div>
+    <section v-else class="py-5">
+      <div class="container">
+        <p>No projects have been listed yet</p>
+      </div>
+    </section>
 
     <the-testimonials-section />
   </main>
