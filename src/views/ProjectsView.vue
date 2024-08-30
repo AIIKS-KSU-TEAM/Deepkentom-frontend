@@ -31,7 +31,7 @@ onMounted(() => {
   <header class="border-bottom">
     <the-navbar />
   </header>
-  <main class="my-4">
+  <main class="mt-4">
     <div class="container mt-4">
       <h1>Projects</h1>
     </div>
@@ -47,9 +47,9 @@ onMounted(() => {
               <img :src="project.image" class="w-100" :alt="project.name" />
             </div>
             <div class="col">
-              <h5 class="card-title">{{ project.name }}</h5>
-              <p class="card-text">{{ project.description }}</p>
-              <div class="progress mb-2">
+              <h5>{{ project.name }}</h5>
+              <p>{{ project.description }}</p>
+              <div class="progress">
                 <div
                   class="progress-bar"
                   role="progressbar"
@@ -61,11 +61,11 @@ onMounted(() => {
                   {{ project.completion }}%
                 </div>
               </div>
-              <p>
+              <div class="mt-3">
                 <strong>Completion:</strong>
                 <span>{{ project.completed }}</span> /
                 <span>{{ project.total }}</span>
-              </p>
+              </div>
             </div>
           </div>
         </div>

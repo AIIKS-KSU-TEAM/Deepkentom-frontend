@@ -47,7 +47,7 @@ onMounted(async () => {
       <div class="mt-5">
         <router-link
           to="/blog"
-          class="btn btn-outline-primary rounded-pill px-4 py-2"
+          class="btn btn-outline-primary w-100 w-sm-auto rounded-pill px-4 py-2"
           >Read more</router-link
         >
       </div>

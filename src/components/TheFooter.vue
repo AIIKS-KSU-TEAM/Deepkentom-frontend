@@ -13,20 +13,6 @@
             <div class="mt-3">
               <p>Building elegant softwares since June 2024</p>
             </div>
-            <div class="mt-3 d-flex gap-3">
-              <router-link to="#" class="text-decoration-none"
-                ><i class="bi bi-facebook"></i
-              ></router-link>
-              <router-link to="#" class="text-decoration-none"
-                ><i class="bi bi-twitter"></i
-              ></router-link>
-              <router-link to="#" class="text-decoration-none"
-                ><i class="bi bi-instagram"></i
-              ></router-link>
-              <router-link to="#" class="text-decoration-none"
-                ><i class="bi bi-linkedin"></i
-              ></router-link>
-            </div>
           </div>
           <div class="col h-100">
             <h5>Services</h5>
@@ -89,19 +75,17 @@
                 <i class="bi bi-envelope"></i>deepkentom@gmail.com
               </li>
             </ul>
-            <div class="d-inline-flex gap-3">
-              <router-link to="#" class="text-decoration-none"
-                ><i class="bi bi-facebook"></i
-              ></router-link>
-              <router-link to="#" class="text-decoration-none"
-                ><i class="bi bi-twitter"></i
-              ></router-link>
-              <router-link to="#" class="text-decoration-none"
-                ><i class="bi bi-instagram"></i
-              ></router-link>
-              <router-link to="#" class="text-decoration-none"
-                ><i class="bi bi-linkedin"></i
-              ></router-link>
+
+            <div class="d-flex gap-3 align-items-center">
+              <a href="#" class="text-decoration-none link-primary text-body">
+                <font-awesome-icon size="xl" :icon="['fab', 'x-twitter']" />
+              </a>
+              <a href="#" class="text-decoration-none link-primary text-body">
+                <font-awesome-icon size="xl" :icon="['fab', 'linkedin']" />
+              </a>
+              <a href="#" class="text-decoration-none link-primary text-body">
+                <font-awesome-icon size="xl" :icon="['fab', 'github']" />
+              </a>
             </div>
           </div>
         </div>

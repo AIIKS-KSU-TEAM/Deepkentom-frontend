@@ -21,8 +21,10 @@ import RecentPostsSection from "@/components/RecentPostsSection.vue";
           We build Small, Medium to Enterprise Applications for our esteemed
           clients across the world.
         </p>
-        <a href="#" class="btn btn-lg rounded-pill btn-primary"
-          >Hire Us Now !</a
+        <router-link
+          to="/contact-us"
+          class="btn btn-lg rounded-pill btn-primary"
+          >Hire Us Now !</router-link
         >
         <br /><br /><br /><br /><br />
       </div>
@@ -32,9 +34,7 @@ import RecentPostsSection from "@/components/RecentPostsSection.vue";
       <div class="container">
         <div class="row align-items-md-center flex-row-reverse">
           <div class="col-md-6">
-            <h2 class="text-primary-dark fw-bold">
-              Tailored Innovative Solutions to Elevate Your Business
-            </h2>
+            <h2>Tailored Innovative Solutions to Elevate Your Business</h2>
             <div class="d-flex gap-3 mt-5">
               <div>
                 <img
@@ -44,7 +44,7 @@ import RecentPostsSection from "@/components/RecentPostsSection.vue";
                 />
               </div>
               <div>
-                <h5 class="text-primary-dark">Software Solutions</h5>
+                <h5>Software Solutions</h5>
                 <p>
                   We develop custom software solutions and have several
                   ready-made products available for immediate implementation to
@@ -62,9 +62,7 @@ import RecentPostsSection from "@/components/RecentPostsSection.vue";
                 />
               </div>
               <div>
-                <h5 class="text-primary-dark">
-                  Artificial Intelligence Solutions
-                </h5>
+                <h5>Artificial Intelligence Solutions</h5>
                 <p>
                   We provide innovative, AI-driven solutions tailored to
                   optimize your business processes, enhance efficiency, and
@@ -82,7 +80,7 @@ import RecentPostsSection from "@/components/RecentPostsSection.vue";
                 />
               </div>
               <div>
-                <h5 class="text-primary-dark">Research & Consultuncy</h5>
+                <h5>Research & Consultuncy</h5>
                 <p>
                   We offer expert research and consultancy across a broad
                   spectrum of IT fields, ensuring tailored solutions for your
@@ -91,8 +89,10 @@ import RecentPostsSection from "@/components/RecentPostsSection.vue";
               </div>
             </div>
             <div class="mt-5">
-              <a href="#" class="btn btn-outline-primary rounded-pill px-4 py-2"
-                >Read more</a
+              <router-link
+                to="/services"
+                class="btn btn-outline-primary rounded-pill w-100 w-sm-auto px-4 py-2"
+                >Read more</router-link
               >
             </div>
           </div>

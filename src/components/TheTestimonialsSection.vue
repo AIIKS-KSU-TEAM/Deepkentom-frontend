@@ -14,11 +14,11 @@ onMounted(async () => {
 </script>
 <template>
   <section v-if="testimonials.length" class="py-5 bg-body-secondary">
-    <div class="container">
+    <div class="container py-3">
       <h2 class="text-center">Testimonials</h2>
       <div
         id="testimonials-carousel"
-        class="mt-4 carousel slide"
+        class="mt-3 carousel slide"
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
@@ -28,10 +28,10 @@ onMounted(async () => {
             :class="['carousel-item', { active: index === 0 }]"
           >
             <div class="d-flex justify-content-center">
-              <div class="w-75">
+              <div class="w-80 d-flex flex-column gap-3">
                 <h5>{{ testimonial.name }}</h5>
-                <p>{{ testimonial.comment }}</p>
-                <div class="d-flex justify-content-end">
+                <p class="w-100 w-sm-75">{{ testimonial.comment }}</p>
+                <div>
                   <div class="d-inline-flex gap-1">
                     <span v-for="(filled, index) in starArray(5)" :key="index">
                       <i
