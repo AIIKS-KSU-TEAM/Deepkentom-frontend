@@ -10,8 +10,10 @@ import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faMapPin } from "@fortawesome/free-solid-svg-icons";
+import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faFacebook, faXTwitter, faGithub, faLinkedin);
 library.add(faStar, faSolidStar);
 library.add(faUserCircle);
 library.add(faPhone, faEnvelope, faMapPin);
+library.add(faLocationPin);

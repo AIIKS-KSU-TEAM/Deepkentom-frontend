@@ -65,16 +65,28 @@
           <div class="col h-100">
             <h5>Contact Us</h5>
             <ul class="list-unstyled d-flex flex-column gap-2">
-              <li class="d-inline-flex gap-1 align-items-center">
-                <font-awesome-icon icon="map-pin" />
+              <li class="d-inline-flex gap-2 align-items-center">
+                <span
+                  class="c-h-8 c-w-8 d-inline-flex align-items-center justify-content-center rounded text-bg-primary"
+                >
+                  <font-awesome-icon icon="location-pin" />
+                </span>
                 <span>Keumbu, Kisii, Kenya</span>
               </li>
-              <li class="d-inline-flex gap-1 align-items-center">
-                <font-awesome-icon icon="phone" />
+              <li class="d-inline-flex gap-2 align-items-center">
+                <span
+                  class="c-h-8 c-w-8 d-inline-flex align-items-center justify-content-center rounded text-bg-primary"
+                >
+                  <font-awesome-icon icon="phone" />
+                </span>
                 <span>+254 114 290 760</span>
               </li>
-              <li class="d-inline-flex gap-1 align-items-center">
-                <font-awesome-icon icon="envelope" />
+              <li class="d-inline-flex gap-2 align-items-center">
+                <span
+                  class="c-h-8 c-w-8 d-inline-flex align-items-center justify-content-center rounded text-bg-primary"
+                >
+                  <font-awesome-icon icon="envelope" />
+                </span>
                 <span>deepkentom@gmail.com</span>
               </li>
             </ul>
