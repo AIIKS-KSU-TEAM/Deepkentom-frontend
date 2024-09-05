@@ -1,6 +1,14 @@
 <script setup>
 import TheNavbar from "@/components/TheNavbar.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import { onMounted } from "vue";
+import useUsers from "@/composables/users";
+
+const { fetchUsers, users } = useUsers();
+
+onMounted(async () => {
+  fetchUsers();
+});
 </script>
 
 <template>
@@ -30,7 +38,7 @@ import TheFooter from "@/components/TheFooter.vue";
         </p>
       </section>
 
-      <section class="team-section py-5">
+      <section v-if="users?.length" class="team-section py-5">
         <h2>Meet Our Team</h2>
         <p>
           Our diverse team includes talent from undergraduates to PhDs, and we
@@ -39,109 +47,69 @@ import TheFooter from "@/components/TheFooter.vue";
           applications.
         </p>
         <div class="mt-3 row row-cols-1 row-cols-md-2 g-4">
-          <div class="col">
+          <div v-for="user in users" :key="user.id" class="col">
             <div
               class="bg-body-secondary rounded p-3 p-md-5 h-100 d-flex flex-column align-items-center gap-3 gap-md-4"
             >
-              <img
-                src="https://via.placeholder.com/160"
-                class="rounded-circle mb-3"
-                alt="Team Member 1"
-              />
-              <h5>John Doe, CEO</h5>
-              <p class="text-center text-muted w-100 w-md-75">
-                John is the founder and CEO of our company. He has over 10 years
-                of experience in the industry.
-              </p>
-              <div class="d-flex gap-3 align-items-center">
-                <a href="#" class="text-decoration-none link-primary text-body">
-                  <font-awesome-icon size="xl" :icon="['fab', 'x-twitter']" />
-                </a>
-                <a href="#" class="text-decoration-none link-primary text-body">
-                  <font-awesome-icon size="xl" :icon="['fab', 'linkedin']" />
-                </a>
-                <a href="#" class="text-decoration-none link-primary text-body">
-                  <font-awesome-icon size="xl" :icon="['fab', 'github']" />
-                </a>
+              <div>
+                <img
+                  v-if="user.avatar"
+                  :src="user.avatar"
+                  height="160"
+                  width="160"
+                  class="rounded-circle object-fit-cover"
+                  :alt="user.name"
+                />
+                <span v-else class="text-body-tertiary"
+                  ><font-awesome-icon icon="user-circle" size="10x"
+                /></span>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div
-              class="bg-body-secondary rounded p-3 p-md-5 h-100 d-flex flex-column align-items-center gap-3 gap-md-4"
-            >
-              <img
-                src="https://via.placeholder.com/160"
-                class="rounded-circle mb-3"
-                alt="Team Member 1"
-              />
-              <h5>John Doe, CEO</h5>
-              <p class="text-center text-muted w-100 w-md-75">
-                John is the founder and CEO of our company. He has over 10 years
-                of experience in the industry.
-              </p>
-              <div class="d-flex gap-3 align-items-center">
-                <a href="#" class="text-decoration-none link-primary text-body">
-                  <font-awesome-icon size="xl" :icon="['fab', 'x-twitter']" />
-                </a>
-                <a href="#" class="text-decoration-none link-primary text-body">
-                  <font-awesome-icon size="xl" :icon="['fab', 'linkedin']" />
-                </a>
-                <a href="#" class="text-decoration-none link-primary text-body">
-                  <font-awesome-icon size="xl" :icon="['fab', 'github']" />
-                </a>
+              <h5>{{ user.name }}, {{ user.title ?? "Developer" }}</h5>
+              <div class="w-100 w-md-75 text-center text-muted">
+                <p v-if="user.about">
+                  {{ user.about }}
+                </p>
+                <p v-else>
+                  Passionate developer specializing in innovative solutions, web
+                  and mobile apps, and delivering high-quality code with a
+                  collaborative approach.
+                </p>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div
-              class="bg-body-secondary rounded p-3 p-md-5 h-100 d-flex flex-column align-items-center gap-3 gap-md-4"
-            >
-              <img
-                src="https://via.placeholder.com/160"
-                class="rounded-circle mb-3"
-                alt="Team Member 2"
-              />
-              <h5>Jane Smith, CTO</h5>
-              <p class="text-center text-muted w-100 w-md-75">
-                Jane is the Chief Technology Officer. She leads our engineering
-                team and oversees all technical aspects of the company.
-              </p>
               <div class="d-flex gap-3 align-items-center">
-                <a href="#" class="text-decoration-none link-primary text-body">
+                <a
+                  target="_blank"
+                  :href="user.x_link ?? '#'"
+                  class="text-decoration-none"
+                  :class="[
+                    user.x_link
+                      ? 'link-primary text-body'
+                      : 'pe-none link-light text-muted',
+                  ]"
+                >
                   <font-awesome-icon size="xl" :icon="['fab', 'x-twitter']" />
                 </a>
-                <a href="#" class="text-decoration-none link-primary text-body">
+                <a
+                  target="_blank"
+                  :href="user.linkedin_link ?? '#'"
+                  class="text-decoration-none"
+                  :class="[
+                    user.linkedin_link
+                      ? 'link-primary text-body'
+                      : 'pe-none link-light text-muted',
+                  ]"
+                >
                   <font-awesome-icon size="xl" :icon="['fab', 'linkedin']" />
                 </a>
-                <a href="#" class="text-decoration-none link-primary text-body">
-                  <font-awesome-icon size="xl" :icon="['fab', 'github']" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div
-              class="bg-body-secondary rounded p-3 p-md-5 h-100 d-flex flex-column align-items-center gap-3 gap-md-4"
-            >
-              <img
-                src="https://via.placeholder.com/160"
-                class="rounded-circle mb-3"
-                alt="Team Member 3"
-              />
-              <h5>Bob Johnson, COO</h5>
-              <p class="text-center text-muted w-100 w-md-75">
-                Bob is the Chief Operating Officer. He ensures the smooth
-                running of day-to-day operations and manages the team.
-              </p>
-              <div class="d-flex gap-3 align-items-center">
-                <a href="#" class="text-decoration-none link-primary text-body">
-                  <font-awesome-icon size="xl" :icon="['fab', 'x-twitter']" />
-                </a>
-                <a href="#" class="text-decoration-none link-primary text-body">
-                  <font-awesome-icon size="xl" :icon="['fab', 'linkedin']" />
-                </a>
-                <a href="#" class="text-decoration-none link-primary text-body">
+                <a
+                  target="_blank"
+                  :href="user.github_link ?? '#'"
+                  class="text-decoration-none"
+                  :class="[
+                    user.github_link
+                      ? 'link-primary text-body'
+                      : 'pe-none link-light text-muted',
+                  ]"
+                >
                   <font-awesome-icon size="xl" :icon="['fab', 'github']" />
                 </a>
               </div>

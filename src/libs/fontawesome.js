@@ -6,7 +6,14 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { faStar as faSolidStar } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faMapPin } from "@fortawesome/free-solid-svg-icons";
+import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faFacebook, faXTwitter, faGithub, faLinkedin);
-library.add(faStar);
-library.add(faSolidStar);
+library.add(faStar, faSolidStar);
+library.add(faUserCircle);
+library.add(faPhone, faEnvelope, faMapPin);
+library.add(faLocationPin);
