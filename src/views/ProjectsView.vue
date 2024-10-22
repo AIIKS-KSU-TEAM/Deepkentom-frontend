@@ -32,11 +32,11 @@ onMounted(() => {
     <the-navbar />
   </header>
   <main class="mt-4">
-    <div class="container mt-4">
+    <div class="container">
       <h1>Projects</h1>
     </div>
 
-    <div class="row row-cols-1 gx-0 gy-5">
+    <div v-if="projects?.length" class="row row-cols-1 gx-0 gy-5">
       <section v-for="(project, index) in projects" :key="index" class="col">
         <div class="container">
           <div
@@ -44,7 +44,18 @@ onMounted(() => {
             :class="[index % 2 === 0 ? 'flex-md-row' : 'flex-md-row-reverse']"
           >
             <div class="col">
-              <img :src="project.image" class="w-100" :alt="project.name" />
+              <img
+                v-if="project.image"
+                :src="project.image"
+                class="w-100"
+                :alt="project.name"
+              />
+              <img
+                v-else
+                src="https://placehold.co/600x400"
+                class="w-100"
+                :alt="project.name"
+              />
             </div>
             <div class="col">
               <h5>{{ project.name }}</h5>
@@ -71,6 +82,11 @@ onMounted(() => {
         </div>
       </section>
     </div>
+    <section v-else class="py-5">
+      <div class="container">
+        <p>No projects have been listed yet</p>
+      </div>
+    </section>
 
     <the-testimonials-section />
   </main>
