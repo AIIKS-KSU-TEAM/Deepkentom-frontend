@@ -71,7 +71,7 @@
                 >
                   <font-awesome-icon icon="location-pin" />
                 </span>
-                <span>Keumbu, Kisii, Kenya</span>
+                <span>Kisii, Kenya</span>
               </li>
               <li class="d-inline-flex gap-2 align-items-center">
                 <span
@@ -79,7 +79,7 @@
                 >
                   <font-awesome-icon icon="phone" />
                 </span>
-                <span>+254 114 290 760</span>
+                <span>+254 710 791 596</span>
               </li>
               <li class="d-inline-flex gap-2 align-items-center">
                 <span
