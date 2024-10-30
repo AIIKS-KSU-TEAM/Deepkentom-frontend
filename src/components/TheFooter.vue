@@ -87,7 +87,7 @@
                 >
                   <font-awesome-icon icon="envelope" />
                 </span>
-                <span>deepkentom@gmail.com</span>
+                <span>kentomdeep@gmail.com</span>
               </li>
             </ul>
 
