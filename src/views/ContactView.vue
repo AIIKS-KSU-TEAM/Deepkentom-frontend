@@ -64,7 +64,7 @@ const submitForm = async (event) => {
               <div class="card-body">
                 <div class="d-flex flex-column align-items-center gap-4">
                   <font-awesome-icon icon="envelope" size="2x" />
-                  <span class="fs-4 fw-bold">deepkentom@gmail.com</span>
+                  <span class="fs-4 fw-bold">kentomdeep@gmail.com</span>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const submitForm = async (event) => {
               <div class="card-body">
                 <div class="d-flex flex-column align-items-center gap-4">
                   <font-awesome-icon icon="map-pin" size="2x" />
-                  <span class="fs-4 fw-bold">Keumbu, Kisii, Kenya</span>
+                  <span class="fs-4 fw-bold">Kisii, Kenya</span>
                 </div>
               </div>
             </div>

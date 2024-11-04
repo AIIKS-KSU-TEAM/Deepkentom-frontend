@@ -25,7 +25,7 @@ import RecentPostsSection from "@/components/RecentPostsSection.vue";
         <router-link
           to="/contact-us"
           class="btn btn-lg rounded-pill btn-primary"
-          >Hire Us Now!</router-link
+          >Consult Us</router-link
         >
         <br /><br /><br /><br /><br />
       </div>
