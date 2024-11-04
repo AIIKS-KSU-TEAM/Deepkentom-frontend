@@ -3,28 +3,13 @@ import TheNavbar from "@/components/TheNavbar.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import TheTestimonialsSection from "@/components/TheTestimonialsSection.vue";
 
-import axios from "axios";
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
+import useProjects from "@/composables/projects";
 
-const projects = ref([]);
-
-const fetchProjectsAndClients = async () => {
-  try {
-    const projectResponse = await axios.get(
-      "http://127.0.0.1:8000/api/projects/",
-    );
-    projects.value = projectResponse.data;
-  } catch (error) {
-    console.error("Failed to fetch data:", error);
-  }
-};
-
-const starArray = (rating) => {
-  return Array.from({ length: 5 }, (_, i) => i < rating);
-};
+const { projects, fetchProjects } = useProjects();
 
 onMounted(() => {
-  fetchProjectsAndClients();
+  fetchProjects();
 });
 </script>
 <template>
