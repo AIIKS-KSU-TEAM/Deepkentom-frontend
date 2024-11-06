@@ -1,49 +1,17 @@
 <script setup>
-import { ref } from 'vue';
-import axios from 'axios';
+import { useInternshipApplication } from "@/composables/useInternshipApplication";
 import TheNavbar from "@/components/TheNavbar.vue";
 import TheFooter from "@/components/TheFooter.vue";
 
-// Reactive variables for form fields
-const name = ref("");
-const email = ref("");
-const phone = ref("");
-const resume = ref(null);
-const message = ref("");
-
-// Function to handle file selection
-const handleFileChange = (e) => {
-  resume.value = e.target.files[0];
-  console.log("Selected file:", resume.value); // Debugging: Log the selected file
-};
-
-// Function to handle form submission
-const submitApplication = async () => {
-  const formData = new FormData();
-  formData.append("name", name.value);
-  formData.append("email", email.value);
-  formData.append("phone", phone.value);
-  
-  if (resume.value) {
-    formData.append("resume", resume.value);
-  } else {
-    console.error("No file selected for resume"); // Debugging
-  }
-
-  formData.append("message", message.value);
-
-  try {
-    const response = await axios.post("http://127.0.0.1:8000/api/internship/submit/", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
-    alert("Application submitted successfully!");
-  } catch (error) {
-    console.error("Error submitting application:", error.response?.data || error.message);
-    alert("Failed to submit application.");
-  }
-};
+const {
+  name,
+  email,
+  phone,
+  resume,
+  message,
+  handleFileChange,
+  submitApplication,
+} = useInternshipApplication();
 </script>
 
 <template>
@@ -106,8 +74,7 @@ const submitApplication = async () => {
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
+    
     <TheFooter />
   </div>
 </template>
