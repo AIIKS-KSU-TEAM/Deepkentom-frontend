@@ -28,7 +28,7 @@ export function useInternshipApplication() {
 
     try {
       const response = await apiClient.post(
-        "/api/internship/submit/",
+        "/internship/submit/",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
