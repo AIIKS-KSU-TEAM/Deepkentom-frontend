@@ -71,7 +71,7 @@
                 >
                   <font-awesome-icon icon="location-pin" />
                 </span>
-                <span>Keumbu, Kisii, Kenya</span>
+                <span>Kisii, Kenya</span>
               </li>
               <li class="d-inline-flex gap-2 align-items-center">
                 <span
@@ -87,7 +87,7 @@
                 >
                   <font-awesome-icon icon="envelope" />
                 </span>
-                <span>deepkentom@gmail.com</span>
+                <span>kentomdeep@gmail.com</span>
               </li>
             </ul>
 
