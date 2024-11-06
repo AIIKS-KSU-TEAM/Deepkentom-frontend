@@ -4,6 +4,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   linkActiveClass: "active",
   linkExactActiveClass: "active",
+
   routes: [
     {
       path: "/",
@@ -19,6 +20,11 @@ const router = createRouter({
       path: "/interns",
       name: "interns",
       component: () => import("@/views/Interns.vue"),
+    },
+    {
+      path: "/application",
+      name: "application",
+      component: () => import("@/views/Application.vue"),
     },
     {
       path: "/contact-us",
@@ -46,6 +52,12 @@ const router = createRouter({
       component: () => import("@/views/blog/DetailView.vue"),
     },
   ],
+
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      top: 0,
+    };
+  },
 });
 
 export default router;

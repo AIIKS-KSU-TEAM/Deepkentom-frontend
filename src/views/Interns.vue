@@ -73,7 +73,7 @@ import TheFooter from "@/components/TheFooter.vue";
       <!-- Call to Action -->
       <div class="text-center mt-4">
         <router-link
-          to="/contact-us"
+          to="/application"
           class="btn btn-lg btn-primary rounded-pill px-4"
         >
           Apply Now
