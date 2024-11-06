@@ -9,7 +9,7 @@ import RecentPostsSection from "@/components/RecentPostsSection.vue";
   <header class="border-bottom">
     <the-navbar />
   </header>
-  
+
   <main>
     <section aria-label="Hero Section">
       <div class="container">
@@ -110,57 +110,58 @@ import RecentPostsSection from "@/components/RecentPostsSection.vue";
 
     <!-- New Section for Innovation and Team Opportunities -->
     <section class="py-5">
-  <div class="container">
-    <div class="row align-items-md-center">
-      <div class="col-md-6">
-        <!-- Flex container for image and title -->
-        <div class="d-flex align-items-center mb-3">
-          <img
-            width="64"
-            src="@/assets/images/software-solutions.png"
-            alt="Software Solutions"
-            class="me-3"
-          />
-          <h2 class="mb-0">Innovation at the Heart of What We Do</h2>
+      <div class="container">
+        <div class="row align-items-md-center">
+          <div class="col-md-6">
+            <!-- Flex container for image and title -->
+            <div class="d-flex align-items-center mb-3">
+              <img
+                width="64"
+                src="@/assets/images/software-solutions.png"
+                alt="Software Solutions"
+                class="me-3"
+              />
+              <h2 class="mb-0">Innovation at the Heart of What We Do</h2>
+            </div>
+
+            <p>
+              <i class="bi bi-lightbulb-fill text-primary"></i>
+              We work as a cohesive team that collectively develops real-life
+              decision-making and technology products across various industries.
+            </p>
+            <p>
+              <i class="bi bi-people-fill text-primary"></i>
+              We are always on the lookout for talented minds to join our
+              dynamic team and contribute their unique insights.
+            </p>
+            <p>
+              <i class="bi bi-globe text-primary"></i>
+              Be a part of a stimulating and collaborative environment where
+              your ideas can make an impact and ignite transformative change
+              worldwide.
+            </p>
+
+            <router-link
+              to="/interns"
+              class="btn btn-outline-primary rounded-pill w-100 w-sm-auto px-4 py-2"
+              >Explore Internship Opportunities</router-link
+            >
+          </div>
+
+          <div class="col-md-6">
+            <img
+              src="@/assets/images/programmer1.png"
+              class="w-100"
+              alt="Innovation and Opportunities"
+            />
+          </div>
         </div>
-        
-        <p>
-          <i class="bi bi-lightbulb-fill text-primary"></i>
-          We work as a cohesive team that collectively develops real-life
-          decision-making and technology products across various industries.
-        </p>
-        <p>
-          <i class="bi bi-people-fill text-primary"></i>
-          We are always on the lookout for talented minds to join our dynamic
-          team and contribute their unique insights.
-        </p>
-        <p>
-          <i class="bi bi-globe text-primary"></i>
-          Be a part of a stimulating and collaborative environment where your
-          ideas can make an impact and ignite transformative change worldwide.
-        </p>
-        
-        <router-link
-          to="/interns"
-          class="btn btn-outline-primary rounded-pill w-100 w-sm-auto px-4 py-2"
-          >Explore Internship Opportunities</router-link
-        >
       </div>
-      
-      <div class="col-md-6">
-        <img
-          src="@/assets/images/programmer1.png"
-          class="w-100"
-          alt="Innovation and Opportunities"
-        />
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <recent-posts-section />
     <the-testimonials-section />
   </main>
-  
+
   <the-footer />
 </template>

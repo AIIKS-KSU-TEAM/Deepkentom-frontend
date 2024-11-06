@@ -27,12 +27,19 @@ export function useInternshipApplication() {
     }
 
     try {
-      const response = await apiClient.post("/api/internship/submit/", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await apiClient.post(
+        "/api/internship/submit/",
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        },
+      );
       alert("Application submitted successfully!");
     } catch (error) {
-      console.error("Error submitting application:", error.response?.data || error.message);
+      console.error(
+        "Error submitting application:",
+        error.response?.data || error.message,
+      );
       alert("Failed to submit application.");
     }
   };
