@@ -22,20 +22,15 @@ onMounted(async () => {
 
       <section aria-label="Who We Are">
         <p>
-          At DeepKentom, we are a dynamic team of IT specialists dedicated to
-          developing a wide range of innovative solutions—from intuitive
-          software that simplifies everyday tasks to advanced AI models that
-          tackle today's most complex challenges. Whether it's enhancing
-          productivity for busy professionals or streamlining processes for more
-          laid-back users, we have the expertise to create technology that makes
-          life easier.
+          At DeepKentom, we are a dynamic team of IT specialists dedicated to pushing boundaries.
+           We develop everything from intuitive software that simplifies everyday tasks to advanced 
+           AI models tackling the world's most complex challenges. With client satisfaction at the 
+           heart of our mission, we collaborate closely to drive meaningful change
         </p>
         <p>
-          At the heart of our mission is client satisfaction. We strive to make
-          a lasting impact by collaborating closely with stakeholders to drive
-          positive change. At DeepKentom, excellence is our standard in
-          everything we do.
-        </p>
+          Our approach is bold and visionary—focused on creating innovative solutions 
+          that make life easier, shooting directly for the moon in all we do.
+          </p>
       </section>
 
       <section v-if="users?.length" class="team-section py-5">
