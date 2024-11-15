@@ -11,7 +11,7 @@
               <span class="text-primary">Kentom</span>
             </div>
             <div class="mt-3">
-              <p>Building elegant softwares since June 2024</p>
+              <p>Building elegant softwares </p>
             </div>
           </div>
           <div class="col h-100">
