@@ -107,7 +107,7 @@
       </div>
       <div class="bottom text-center py-5">
         <small class="text-muted"
-          >&copy; {{ new Date().getFullYear() }} DeepKentom.com. All rights
+          >2023 DeepKentom.com. All rights
           reserved.</small
         >
       </div>
