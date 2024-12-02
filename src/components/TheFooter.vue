@@ -107,7 +107,7 @@
       </div>
       <div class="bottom text-center py-5">
         <small class="text-muted"
-          >2023 DeepKentom.com. All rights
+          >DeepKentom.com. All rights
           reserved.</small
         >
       </div>
