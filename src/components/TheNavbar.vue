@@ -1,10 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary py-4">
     <div class="container">
-      <router-link class="navbar-brand d-inline-flex fw-bold fs-4" to="/">
-        <span>Deep</span>
-        <span class="text-primary">Kentom</span>
-      </router-link>
+      <router-link class="navbar-brand d-inline-flex align-items-center" to="/">
+  <img src="@/assets/logo1.png" alt="DeepKentom Logo" height="60" />
+</router-link>
+
       <button
         class="navbar-toggler"
         type="button"

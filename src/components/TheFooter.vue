@@ -6,12 +6,12 @@
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3"
         >
           <div class="col h-100">
-            <div class="d-flex fs-5 fw-bolder">
-              <span>Deep</span>
-              <span class="text-primary">Kentom</span>
-            </div>
+            <router-link class="navbar-brand d-inline-flex align-items-center" to="/">
+  <img src="@/assets/logo1.png" alt="DeepKentom Logo" height="60" />
+</router-link>
             <div class="mt-3">
-              <p>Building elegant softwares </p>
+              <p>Building<br>
+              Elegant softwares </p>
             </div>
           </div>
           <div class="col h-100">
